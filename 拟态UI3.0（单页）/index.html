@@ -1,0 +1,160 @@
+<!-- 
+    开源代码 禁止商用贩卖或者资源收费！
+    作者QQ：1809185784
+    博客：www.xfwl.club
+ -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小枫拟态UI3.0-拟态UI设计</title>
+    <meta name="keywords" content="小枫网络,小枫网络导航,小枫网络工作室,小枫拟态ui,拟态UI,新拟态,网页UI,简约个人主页,个人主页,导航">
+    <meta name="description" content="小枫拟态UI设计是一款简约平滑全开源的自适应个人主页">
+    <meta name="author" content="小枫QQ180918574">
+    <link rel="shortcut icon" href="https://www.xfwl.club/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <!-- <script src="./assets/js/jQuery.js"></script> -->
+    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="xf_load"></div>
+    <div class="core xf_frame">
+        <div class="xf_bg">
+            <nav class="hamburger_menu">
+                <input type="checkbox" id="toggle" />
+                <label for="toggle">
+                    <div class="hamburger_container">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                <ul>
+                    <li><a href="JavaScript:;" rel="noopener noreferrer">小枫网络</a></li>
+                    <li><a href="JavaScript:;" rel="noopener noreferrer">免费床图</a></li>
+                    <li><a href="JavaScript:;" rel="noopener noreferrer">layui镜像站</a></li>
+                    <li><a href="JavaScript:;" rel="noopener noreferrer">H5音乐播放器</a></li>
+                </ul>
+            </nav>
+            <div class="xf_basemap"></div>
+            <div class="core xf_detail">
+                <div class="xf_left">
+                    <h3 class="time_econd"></h3>
+                    <h4 class="time_moon"></h4>
+                </div>
+                <img class="xf_tx" src="https://q2.qlogo.cn/headimg_dl?dst_uin=1809185784&amp;spec=100" alt="摸摸我的脑瓜子"
+                    title="摸摸我的脑瓜子">
+                <ul class="xf_right">
+                    <li>
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=1809185784&site=qq&menu=yes" target="_blank">
+                            <img src="./assets/images/xf-QQ.png" alt="picture" title="添加QQ">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">
+                            <img src="./assets/images/xf-wx.png" alt="picture" title="添加微信" class="wx_ico">
+                        </a>
+                    </li>
+                    <li class="wx_picture">
+                        <a href="https://admin.xfwl.club/image/xf_wx.png" target="_blank">
+                            <img src="https://admin.xfwl.club/image/xf_wx.png" alt="wx" title="微信">
+                        </a>
+                    </li>
+                    <li>
+                        <h5 id="clock"></h5>
+                    </li>
+                </ul>
+                <div class="xf_slide">
+                    <div class="shadow_style xf_temperature">
+                        <div class="xf_bg_color">
+                            <h3 class="climate"></h3>
+                            <h4 class="xf_area"></h4>
+                            <div class="xf_25round_1"></div>
+                            <div class="xf_25round_2"></div>
+                        </div>
+                    </div>
+                    <div class="shadow_style musicbox">
+                        <div class="music-detail">
+                            <div class="music-img">
+                            </div>
+                            <div class="music-info">
+                            </div>
+                        </div>
+                        <div class="music-control">
+                            <div class="runningbox">
+                                <div class="start">00:00</div>
+                                <div class="running" onclick="changeProgress()">
+                                    <div class="running1">
+                                    </div>
+                                </div>
+                                <div class="end">00:00</div>
+                            </div>
+                            <div class="control">
+                                <span id="replay" class="iconfont" onclick="replayMusic()">&#xe6e4;</span>
+                                <span id="pre" class="iconfont" onclick="preMusic()">&#xe603;</span>
+                                <span id="pause" class="iconfont" onclick="pauseMusic()">&#xe6a5;</span>
+                                <span id="next" class="iconfont" onclick="nextMusic()">&#xe602;</span>
+                                <div class="vulme">
+                                    <span id="mute" class="iconfont" onclick="muteMusic()">&#xe64c;</span>
+                                    <div class="vulmeBar">
+                                        <div class="vulmeBar1" onclick="changeVulme()"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shadow_style xf_introduce">
+                        <h3><i class="iconfont">&#xe605;</i>姓名：<span>小枫</span></h3>
+                        <h3><i class="iconfont">&#xe6b2;</i>年龄：<span>19岁</span></h3>
+                        <h3><i class="iconfont">&#xe518;</i>地区：<span>江西·吉安</span></h3>
+                        <h3><i class="iconfont">&#xe655;</i>爱好：<span>学习</span></h3>
+                    </div>
+                    <div class="shadow_style xf_typewriter">
+                        <p id="xf_text">
+                            此页面由原生HTML,CSS,JS,jQuery开发! 本站UI以及代码由小枫原创,并且源图和代码全部开源供大家学习使用(严禁商用)。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/time.js"></script>
+    <script src="./assets/js/text.js"></script>
+    <script src="./assets/js/weather.js"></script>
+    <script src="./assets/js/fireworks.js"></script>
+    <script src="./assets/js/player.js"></script>
+    <!-- 2d live 版娘 -->
+    <!-- <script src="https://api.xfyun.club/live2d-widget-master/autoload.js" type="text/javascript" charset="utf-8"></script> -->
+    <script type="text/javascript">
+        var timer = null;
+        var flag = false;
+        $(window).on('load', function handlePreloader() {
+            if ($('.xf_load').length) {
+                $('.xf_load').delay(200).fadeOut(500);
+            }
+        });
+        $(document).ready(function () {
+            $(".xf_tx").click(function () {
+                $(".xf_slide").slideToggle("slow");
+            })
+            $(".wx_ico").click(function () {
+                $(".wx_picture").slideToggle("slow");
+            })
+            $('.xf_tx').click(function () {
+                if (flag) {
+                    $('.xf_basemap').css('filter', '');
+                } else {
+                    $('.xf_basemap').css('filter', 'blur(3px)');
+                }
+                flag = !flag;
+            })
+        });
+    </script>
+</body>
+
+</html>
